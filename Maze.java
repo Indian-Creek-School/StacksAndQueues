@@ -11,6 +11,10 @@ public class Maze {
                 m=new String[length+5][length+5];
             }
         }
+        for(int i=0;i<length;i++){
+            for(int j=0;j<length;j++){
+            }
+        }
     }
     public boolean legalMove(){
         if(m[p.setPosForCheck(1)[0]][p.setPosForCheck(1)[1]].equals(" ")){
