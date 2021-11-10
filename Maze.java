@@ -11,8 +11,8 @@ public class Maze {
             }
         }
     }
-    public boolean legalMove(){
-        if(m[p.getPos()[1]][p.getPos()[0]].equals(" ")){
+    public boolean legalMove(int[] xy){
+        if(m[xy[0][xy[1]].equals(" ")){
             return true;
         }
         return false;
