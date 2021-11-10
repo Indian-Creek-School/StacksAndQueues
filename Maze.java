@@ -9,10 +9,10 @@ public class Maze {
     public Maze(int l,player x){
         p=x;
         length=l;
-        start[1]=(int)Math.random()+(length+5);
+        start[1]=0;
         start[0]=(int)Math.random()+(length+5);
         end[0]=(int)Math.random()+(length+5);
-        end[1]=(int)Math.random()+(length+5);
+        end[1]=length+5;
 
         for(int i=0;i<10;i++){
             if(i==length){
@@ -20,8 +20,8 @@ public class Maze {
                 winPath=new String[length+5][length+5];
             }
         }
-        for(int i=0;i<end[0];i++){
-            for(int j=0;j<end[1];j++){
+        for(int i=start[1];i<end[1];i++){
+            for(int j=0;j<end[0];j++){
                 winPath[i][j]="f";
             }
         }
