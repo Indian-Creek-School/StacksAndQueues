@@ -20,10 +20,16 @@ public class Maze {
                 winPath=new int[length+5][length+5];
             }
         }
-        for(int i=start[1];i<end[1];i++){
-            for(int j=0;j<end[0];j++){
-                winPath[i][j]=1;
+        int count=0;
+        for(int i=0;i<length+5;i++){
+            for(int j=0;j<length+5;j++){
+                if(count==0){
+                    winPath[start[0]][0]=1;
+                }else{
+                    
+                }
             }
+            count++;
         }
     }
     public boolean legalMove(){
