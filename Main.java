@@ -7,8 +7,7 @@ public class Main{
             st1.push(i);
         }
         for(int i=1;i<=10;i++){
-            System.out.println(st1.pop());
-        }        
-        
+            
+        }
     }
 }

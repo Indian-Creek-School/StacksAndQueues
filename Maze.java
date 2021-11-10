@@ -1,32 +1,32 @@
+import java.util.Stack;
 public class Maze {
     //1-10 value for a long or short maze
     private int length;
     private String[][] m;
-    private int[][] winPath;
+    private Stack<Integer[]> winPath=new Stack<Integer[]>();;
     private player p;
     private int[] start;
     private int[] end;
     public Maze(int l,player x){
         p=x;
-        length=l;
+        length=l+5;
         start[1]=0;
-        start[0]=(int)Math.random()+(length+5);
-        end[0]=(int)Math.random()+(length+5);
-        end[1]=length+5;
+        start[0]=(int)Math.random()*(length);
+        end[0]=(int)Math.random()*(length);
+        end[1]=length;
 
         for(int i=0;i<10;i++){
             if(i==length){
-                m=new String[length+5][length+5];
-                winPath=new int[length+5][length+5];
+                m=new String[length][length];
             }
         }
         int count=0;
-        for(int i=0;i<length+5;i++){
-            for(int j=0;j<length+5;j++){
+        for(int i=0;i<length;i++){
+            for(int j=0;j<length;j++){
                 if(count==0){
-                    winPath[start[0]][0]=1;
-                }else{
                     
+                }else{
+
                 }
             }
             count++;
