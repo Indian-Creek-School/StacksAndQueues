@@ -2,7 +2,7 @@ public class Maze {
     //1-10 value for a long or short maze
     private int length;
     private String[][] m;
-    private String[][] winPath;
+    private int[][] winPath;
     private player p;
     private int[] start;
     private int[] end;
@@ -17,12 +17,12 @@ public class Maze {
         for(int i=0;i<10;i++){
             if(i==length){
                 m=new String[length+5][length+5];
-                winPath=new String[length+5][length+5];
+                winPath=new int[length+5][length+5];
             }
         }
         for(int i=start[1];i<end[1];i++){
             for(int j=0;j<end[0];j++){
-                winPath[i][j]="f";
+                winPath[i][j]=1;
             }
         }
     }
