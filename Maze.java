@@ -12,7 +12,7 @@ public class Maze {
         }
     }
     public void legalMove(){
-
+        
     }
     
 }
