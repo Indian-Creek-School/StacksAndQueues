@@ -8,6 +8,16 @@ public class player{
         setPos(-1);
     }
     public int[] setPos(int d){
+        if(path.peek()=='F'){
+            pos[1]+=d;
+        }else if(path.peek()=='U'){
+            pos[0]+=d;
+        }else if(path.peek()=='D'){
+            pos[0]-=d;
+        }
+        return pos;
+    }
+    public int[] setPosForCheck(int d){
         int[] tempPos=pos;
         if(path.peek()=='F'){
             tempPos[1]+=d;

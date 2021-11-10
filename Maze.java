@@ -3,7 +3,8 @@ public class Maze {
     private int length;
     private String[][] m;
     private player p;
-    public Maze(int l){
+    public Maze(int l,player x){
+        p=x;
         length=l;
         for(int i=0;i<10;i++){
             if(i==length){
@@ -11,8 +12,9 @@ public class Maze {
             }
         }
     }
-    public boolean legalMove(int[] xy){
-        if(m[xy[0][xy[1]].equals(" ")){
+    public boolean legalMove(){
+        if(m[p.setPosForCheck(1)[0]][p.setPosForCheck(1)[1]].equals(" ")){
+            p.setPos(1);
             return true;
         }
         return false;
