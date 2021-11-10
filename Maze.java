@@ -5,8 +5,8 @@ public class Maze {
     private String[][] m;
     private Stack<Integer[]> winPath=new Stack<Integer[]>();;
     private player p;
-    private int[] start;
-    private int[] end;
+    private Integer[] start;
+    private Integer[] end;
     public Maze(int l,player x){
         p=x;
         length=l+5;
@@ -24,9 +24,9 @@ public class Maze {
         for(int i=0;i<length;i++){
             for(int j=0;j<length;j++){
                 if(count==0){
-                    
+                    winPath.add(start);
                 }else{
-
+                   
                 }
             }
             count++;
