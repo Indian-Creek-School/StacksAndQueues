@@ -27,7 +27,7 @@ public class Maze {
         winSlope=(end[0]-start[0])/(end[1]-start[1]);
         for(int i=0;i<length+1;i++){
             Double[] z=new Double[]{(winSlope*i+start[0]),(double)i};
-            winPath.add(z);
+            winPath.add(z);//hi\
         }
     }
     public boolean legalMove(){
