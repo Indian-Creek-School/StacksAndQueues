@@ -7,6 +7,8 @@ public class Maze {
     private player p;
     private Integer[] start;
     private Integer[] end;
+    private double winSlope;
+    private double winEq;
     public Maze(int l,player x){
         p=x;
         length=l+5;
@@ -14,19 +16,19 @@ public class Maze {
         start[0]=(int)Math.random()*(length);
         end[0]=(int)Math.random()*(length);
         end[1]=length;
-
         for(int i=0;i<10;i++){
             if(i==length){
                 m=new String[length][length];
             }
         }
+        winSlope=(start[0]-end[0])/(start[1]-end[1]);
         int count=0;
         for(int i=0;i<length;i++){
             for(int j=0;j<length;j++){
                 if(count==0){
                     winPath.add(start);
                 }else{
-                   
+                    
                 }
             }
             count++;
