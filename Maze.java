@@ -8,8 +8,8 @@ public class Maze {
     private player p;
     private Double[] start;
     private Double[] end;
-    private double winSlope;
-    private double winEq;
+    private Double winSlope;
+    private Double winEq;
     public Maze(int l){
         length=l+5;
         l2=l+5;
@@ -25,8 +25,8 @@ public class Maze {
             }
         }
         winSlope=(start[0]-end[0])/(start[1]-end[1]);
-        for(double i=0;i<length;i++){
-            Double[] z={(winSlope*i+start[0]),i};
+        for(int i=0;i<length;i++){
+            Double[] z=new Double[]{(winSlope*i+start[0]),(double)i};
             winPath.add(z);
         }
     }
