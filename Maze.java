@@ -3,35 +3,27 @@ public class Maze {
     //1-10 value for a long or short maze
     private int length;
     private String[][] m;
-    private Stack<Integer[]> winPath=new Stack<Integer[]>();;
+    public Stack<Double[]> winPath=new Stack<Double[]>();;
     private player p;
-    private Integer[] start;
-    private Integer[] end;
+    private Double[] start;
+    private Double[] end;
     private double winSlope;
     private double winEq;
-    public Maze(int l,player x){
-        p=x;
+    public Maze(int l){
         length=l+5;
-        start[1]=0;
-        start[0]=(int)Math.random()*(length);
-        end[0]=(int)Math.random()*(length);
-        end[1]=length;
+        start[1]=0.0;
+        start[0]=Math.random()*(length);
+        end[0]=Math.random()*(length);
+        end[1]=length+0.0;
         for(int i=0;i<10;i++){
             if(i==length){
                 m=new String[length][length];
             }
         }
         winSlope=(start[0]-end[0])/(start[1]-end[1]);
-        int count=0;
-        for(int i=0;i<length;i++){
-            for(int j=0;j<length;j++){
-                if(count==0){
-                    winPath.add(start);
-                }else{
-                    
-                }
-            }
-            count++;
+        for(double i=0;i<length;i++){
+            Double[] z={(winSlope*i+start[0]),i};
+            winPath.add(z);
         }
     }
     public boolean legalMove(){
