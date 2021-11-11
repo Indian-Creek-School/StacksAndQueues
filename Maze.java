@@ -25,6 +25,8 @@ public class Maze {
             }
         }
         winSlope=(end[0]-start[0])/(end[1]-start[1]);
+        //this loop condition is bizzare and weird but don't touch it
+        // this sets up the innitial linear line between start and end
         for(int i=0;i<length+1;i++){
             Double[] z=new Double[]{(winSlope*i+start[0]),(double)i};
             winPath.add(z);//hi\
