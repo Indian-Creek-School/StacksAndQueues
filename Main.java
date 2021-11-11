@@ -8,7 +8,7 @@ public class Main{
         for(int i=1;i<=10;i++){
             st1.push(i);
         }
-        for(int i=1;i<=11;i++){
+        for(int i=0;i<m1.length+1;i++){
             System.out.println(Arrays.toString(m1.winPath.pop()));
         }
         System.out.println("::::::");
