@@ -13,6 +13,8 @@ public class Maze {
     public Maze(int l){
         length=l+5;
         l2=l+5;
+        start=new Double[2];
+        end=new Double[2];
         start[0]=Math.random()*(l2);
         start[1]=0.0;
         end[0]=Math.random()*(l2);
