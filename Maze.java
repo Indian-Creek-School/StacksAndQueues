@@ -1,13 +1,13 @@
 import java.util.Stack;
 public class Maze {
     //1-10 value for a long or short maze
-    private int length;
+    public int length;
     private double l2;
     private String[][] m;
     public Stack<Double[]> winPath=new Stack<Double[]>();;
     private player p;
-    private Double[] start;
-    private Double[] end;
+    public Double[] start;
+    public Double[] end;
     private Double winSlope;
     private Double winEq;
     public Maze(int l){
@@ -24,7 +24,7 @@ public class Maze {
                 m=new String[length][length];
             }
         }
-        winSlope=(start[0]-end[0])/(start[1]-end[1]);
+        winSlope=(end[0]-start[0])/(end[1]-start[1]);
         for(int i=0;i<length;i++){
             Double[] z=new Double[]{(winSlope*i+start[0]),(double)i};
             winPath.add(z);
