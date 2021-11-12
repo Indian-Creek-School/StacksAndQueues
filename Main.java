@@ -1,6 +1,8 @@
 import java.util.Stack;
 import java.util.Queue;
 import java.util.Arrays;
+import javax.swing.*;
+
 public class Main{
     /*
         To Do:
@@ -9,6 +11,10 @@ public class Main{
             make sure the maze is imported promperly
     */
     public static void main(String args[]){
+        JFrame frame = new JFrame("My First GUI");
+       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       frame.setSize(1920,1080);
+       frame.setVisible(true);
         Maze m1=new Maze(10);
         Stack<Integer> st1=new Stack<Integer>();
         for(int i=1;i<=10;i++){

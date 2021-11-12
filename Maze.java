@@ -9,22 +9,22 @@ public class Maze {
 
     //1-10 value for a long or short maze
     public int length;
-    private double l2;
+    private int l2;
     private String[][] m;
-    public Stack<Double[]> winPath=new Stack<Double[]>();;
+    public Stack<Integer[]> winPath=new Stack<Integer[]>();;
     private player p;
-    public Double[] start;
-    public Double[] end;
-    private Double winSlope;
-    private Double winEq;
+    public Integer[] start;
+    public Integer[] end;
+    private Integer winSlope;
+    private Integer winEq;
     public Maze(int l){
         length=l+5;
         l2=l+5;
-        start=new Double[2];
-        end=new Double[2];
-        start[0]=Math.random()*(l2);
-        start[1]=0.0;
-        end[0]=Math.random()*(l2);
+        start=new Integer[2];
+        end=new Integer[2];
+        start[0]=((int)Math.random()+1)*(l2);
+        start[1]=0;
+        end[0]=((int)Math.random()+1)*(l2);
         end[1]=l2;
         for(int i=0;i<10;i++){
             if(i==length){
@@ -35,7 +35,7 @@ public class Maze {
         //this loop condition is bizzare and weird but don't touch it
         // this sets up the innitial linear line between start and end
         for(int i=0;i<length+1;i++){
-            Double[] z=new Double[]{(winSlope*i+start[0]),(double)i};
+            Integer[] z=new Integer[]{(winSlope*i+start[0]),i};
             winPath.add(z);//hi\
         }
     }
