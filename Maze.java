@@ -1,5 +1,12 @@
 import java.util.Stack;
 public class Maze {
+    /*
+        To Do:
+            Make the wining path non linear
+            Setup the randomizing of other walls in the maze
+            Fix the borked legal move setting
+    */
+
     //1-10 value for a long or short maze
     public int length;
     private double l2;
@@ -30,14 +37,6 @@ public class Maze {
         for(int i=0;i<length+1;i++){
             Double[] z=new Double[]{(winSlope*i+start[0]),(double)i};
             winPath.add(z);//hi\
-        }
-    }
-    // for testing purposes only
-    //plan for printing this:
-    //  
-    public void printWinPath(){
-        for(int i=0;i<length+1;i++){
-            
         }
     }
     public boolean legalMove(){

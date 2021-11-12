@@ -2,6 +2,12 @@ import java.util.Stack;
 import java.util.Queue;
 import java.util.Arrays;
 public class Main{
+    /*
+        To Do:
+            Setup a GUI
+            Make sure that I can make the maze character move
+            make sure the maze is imported promperly
+    */
     public static void main(String args[]){
         Maze m1=new Maze(10);
         Stack<Integer> st1=new Stack<Integer>();
