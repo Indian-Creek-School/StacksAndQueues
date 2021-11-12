@@ -32,6 +32,14 @@ public class Maze {
             winPath.add(z);//hi\
         }
     }
+    // for testing purposes only
+    //plan for printing this:
+    //  
+    public void printWinPath(){
+        for(int i=0;i<length+1;i++){
+            
+        }
+    }
     public boolean legalMove(){
         if(m[p.setPosForCheck(1)[0]][p.setPosForCheck(1)[1]].equals(" ")){
             p.setPos(1);

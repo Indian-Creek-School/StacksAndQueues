@@ -3,7 +3,7 @@ import java.util.Queue;
 import java.util.Arrays;
 public class Main{
     public static void main(String args[]){
-        Maze m1=new Maze(5);
+        Maze m1=new Maze(10);
         Stack<Integer> st1=new Stack<Integer>();
         for(int i=1;i<=10;i++){
             st1.push(i);
