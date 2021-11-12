@@ -5,11 +5,11 @@ public class Maze {
             Make the wining path non linear
             Setup the randomizing of other walls in the maze
             Fix the borked legal move setting
+            fix the win path again because I changed them back to ints
     */
 
     //1-10 value for a long or short maze
     public int length;
-    private int l2;
     private String[][] m;
     public Stack<Integer[]> winPath=new Stack<Integer[]>();;
     private player p;
@@ -19,13 +19,12 @@ public class Maze {
     private Integer winEq;
     public Maze(int l){
         length=l+5;
-        l2=l+5;
         start=new Integer[2];
         end=new Integer[2];
-        start[0]=((int)Math.random()+1)*(l2);
+        start[0]=((int)Math.random()+1)*(length);
         start[1]=0;
-        end[0]=((int)Math.random()+1)*(l2);
-        end[1]=l2;
+        end[0]=((int)Math.random()+1)*(length);
+        end[1]=length;
         for(int i=0;i<10;i++){
             if(i==length){
                 m=new String[length][length];
