@@ -9,21 +9,21 @@ public class Maze {
     */
 
     //1-10 value for a long or short maze
-    public int length;
+    public Integer length;
     private String[][] m;
     public Stack<Integer[]> winPath=new Stack<Integer[]>();;
     private player p;
-    public Integer[] start;
-    public Integer[] end;
-    private Integer winSlope;
+    public double[] start;
+    public double[] end;
+    private double winSlope;
     private Integer winEq;
     public Maze(int l){
-        length=l+5;
-        start=new Integer[2];
-        end=new Integer[2];
-        start[0]=((int)Math.random()+1)*(length);
+        length=l+25;
+        start=new double[2];
+        end=new double[2];
+        start[0]=((Math.random())*length+1);
         start[1]=0;
-        end[0]=((int)Math.random()+1)*(length);
+        end[0]=((Math.random())*length+1);
         end[1]=length;
         for(int i=0;i<10;i++){
             if(i==length){
@@ -34,8 +34,8 @@ public class Maze {
         //this loop condition is bizzare and weird but don't touch it
         // this sets up the innitial linear line between start and end
         for(int i=0;i<length+1;i++){
-            Integer[] z=new Integer[]{(winSlope*i+start[0]),i};
-            winPath.add(z);//hi\
+            Integer[] z=new Integer[]{(new Integer((int)(winSlope*i+start[0]))),i};
+            winPath.add(z);
         }
     }
     public boolean legalMove(){
