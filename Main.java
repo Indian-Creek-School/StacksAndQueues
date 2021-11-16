@@ -11,6 +11,7 @@ public class Main{
                 make sure the maze is imported promperly
         */
     public static void main(String args[]){
+        Maze m1=new Maze(10);
         JFrame frame = new JFrame("My First GUI");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1920,1080);
@@ -27,8 +28,7 @@ public class Main{
         frame.add(b1); frame.add(b2); frame.add(b3);  
         frame.add(b4); frame.add(b5); frame.add(b6);  
         frame.add(b7); frame.add(b8); frame.add(b9); 
-        frame.setLayout(new GridLayout(3,3));
-        Maze m1=new Maze(10);
+        frame.setLayout(new GridLayout(m1.length,m1.length));
             Stack<Integer> st1=new Stack<Integer>();
             for(int i=1;i<=10;i++){
                 st1.push(i);
@@ -39,5 +39,6 @@ public class Main{
         System.out.println("::::::");
         System.out.println(Arrays.toString(m1.start));
         System.out.println(Arrays.toString(m1.end));
+        System.out.println(m1.length);
     }
 }
