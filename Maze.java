@@ -34,6 +34,7 @@ public class Maze {
         //this loop condition is bizzare and weird but don't touch it
         // this sets up the innitial linear line between start and end
         for(int i=0;i<length+1;i++){
+            //leave this alone its fine that it has the line through it, it works
             Integer[] z=new Integer[]{(new Integer((int)(winSlope*i+start[0]))),i};
             winPath.add(z);
         }
