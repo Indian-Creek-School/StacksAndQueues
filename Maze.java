@@ -5,7 +5,7 @@ public class Maze {
             Make the wining path non linear
             Setup the randomizing of other walls in the maze
             Fix the borked legal move setting
-            fix the win path again because I changed them back to ints
+            
     */
 
     //1-10 value for a long or short maze

@@ -2,7 +2,6 @@ import java.util.Stack;
 public class player{
     /*
         To Do:
-            Find a way to implement a queue
             Fix the borked position setting and legal move checking
     */
     public player(){}

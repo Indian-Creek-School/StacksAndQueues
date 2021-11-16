@@ -8,7 +8,8 @@ public class Main{
             To Do:
                 Setup a GUI
                 Make sure that I can make the maze character move
-                make sure the maze is imported promperly
+                setup the walls as GUI elements
+                
         */
     public static void main(String args[]){
         Maze m1=new Maze(10);
