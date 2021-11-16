@@ -2,7 +2,7 @@ import java.util.Stack;
 public class Maze {
     /*
         To Do:
-            Make the wining path non linear
+            Make the wining path non linear(meaning like make it not be a straight line and more jagged like a normal maze)
             Setup the randomizing of other walls in the maze
             Fix the borked legal move setting
             

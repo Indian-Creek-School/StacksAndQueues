@@ -9,6 +9,7 @@ public class Main{
                 Setup a GUI
                 Make sure that I can make the maze character move as an animation
                 setup the walls as GUI elements
+                maybe make a start and stop button or something
                 
         */
     public static void main(String args[]){
