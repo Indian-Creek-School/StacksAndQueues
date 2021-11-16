@@ -31,10 +31,9 @@ public class Maze {
             }
         }
         winSlope=(end[0]-start[0])/(end[1]-start[1]);
-        //this loop condition is bizzare and weird but don't touch it
-        // this sets up the innitial linear line between start and end
         for(int i=0;i<length+1;i++){
             //leave this alone its fine that it has the line through it, it works
+            //if you can't read it it says 'winSlope*i+start,' which is just the slope intersept form with start being the intersept because it is a random value on the y axis
             Integer[] z=new Integer[]{(new Integer((int)(winSlope*i+start[0]))),i};
             winPath.add(z);
         }
