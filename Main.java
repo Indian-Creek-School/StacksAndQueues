@@ -7,7 +7,7 @@ public class Main{
         /*
             To Do:
                 Setup a GUI
-                Make sure that I can make the maze character move
+                Make sure that I can make the maze character move as an animation
                 setup the walls as GUI elements
                 
         */

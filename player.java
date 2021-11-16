@@ -3,6 +3,7 @@ public class player{
     /*
         To Do:
             Fix the borked position setting and legal move checking
+            setup the actuall solver method(should be easy, just 4 if statements)
     */
     public player(){}
     private Stack<Character> path=new Stack<Character>();
