@@ -14,11 +14,11 @@ public class Main{
         */
     public static void main(String args[]){
         Maze m1=new Maze(10);
-        JFrame frame = new JFrame("My First GUI");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1920,1080);
-        frame.setVisible(true);
-        frame.setLayout(new GridLayout(m1.length,m1.length));
+        // JFrame frame = new JFrame("My First GUI");
+        // frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        // frame.setSize(1920,1080);
+        // frame.setVisible(true);
+        // frame.setLayout(new GridLayout(m1.length,m1.length));
             Stack<Integer> st1=new Stack<Integer>();
             for(int i=1;i<=10;i++){
                 st1.push(i);
