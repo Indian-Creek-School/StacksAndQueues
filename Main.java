@@ -8,6 +8,8 @@ public class Main extends JPanel implements ActionListener{
 
     private JFormattedTextField text = new JFormattedTextField();
     private JButton undo = new JButton();
+    private Stack<String> words = new Stack<String>();
+    
     public static void main(String args[]){
         // Maze m1=new Maze(10);
         Main m = new Main();
@@ -28,18 +30,19 @@ public class Main extends JPanel implements ActionListener{
         m.text.addActionListener(m);
         m.text.setActionCommand("text");
         frame.add(m.text);
+        m.words.push(" ");
 
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        Stack<String> words = new Stack<String>();
+        
         if(e.getActionCommand().equals("text")){
             words.push(text.getText());
-            System.out.println(words.peek());
         } else if(e.getActionCommand().equals("undo")){
             words.pop();
-            this.text.setText(words.peek().toString());
+            this.text.setText(words.peek());
+            
             // System.out.println("test");
         }
     }
