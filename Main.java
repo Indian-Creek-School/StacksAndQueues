@@ -9,7 +9,7 @@ public class Main extends JPanel implements ActionListener{
     private JFormattedTextField text = new JFormattedTextField();
     private JButton undo = new JButton();
     private Stack<String> words = new Stack<String>();
-    
+
     public static void main(String args[]){
         // Maze m1=new Maze(10);
         Main m = new Main();
