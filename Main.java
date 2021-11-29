@@ -36,11 +36,11 @@ public class Main extends JPanel implements ActionListener{
         Stack<String> words = new Stack<String>();
         if(e.getActionCommand().equals("text")){
             words.push(text.getText());
-        }
-        if(e.getActionCommand().equals("undo")){
-            // words.pop();
-            // text.setText(words.peek().toString());
-            System.out.println("test");
+            System.out.println(words.peek());
+        } else if(e.getActionCommand().equals("undo")){
+            words.pop();
+            this.text.setText(words.peek().toString());
+            // System.out.println("test");
         }
     }
 }
