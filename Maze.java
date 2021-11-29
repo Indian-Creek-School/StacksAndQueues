@@ -7,7 +7,7 @@ public class Maze {
             Fix the borked legal move setting
             
     */
-
+    
     //1-10 value for a long or short maze
     public Integer length;
     private String[][] m;
