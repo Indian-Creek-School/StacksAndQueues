@@ -8,6 +8,7 @@ public class Main extends JPanel implements ActionListener{
 
     private JFormattedTextField text = new JFormattedTextField();
     private JButton undo = new JButton();
+    private JBu
     private Stack<String> words = new Stack<String>();
     private Stack<String>  redos = new Stack<String>();
 
@@ -26,6 +27,8 @@ public class Main extends JPanel implements ActionListener{
         m.undo.setActionCommand("undo");
         m.undo.setText("Undo");
         frame.add(m.undo);
+
+
 
         m.text.setPreferredSize(new Dimension(500,500));
         m.text.addActionListener(m);
